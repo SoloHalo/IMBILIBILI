@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.cql.imbilibili"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+
+    <uses-sdk tools:overrideLibrary="tv.danmaku.ijk.media.player_arm64,com.example.ijkplayer_x86_64" />
+
+    <application
+        android:name=".IMBilibiliApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.common.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.home.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.bangumi.BangumiDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.common.WebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.feedback.FeedbackActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.bangumi.SeasonGroupActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.bangumi.BangumiIndexActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.partion.PartitionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.search.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.common.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".view.bangumi.FollowBangumiActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.usercenter.UserCenterActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.video.VideoDetailActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.video.VideoPlayActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreen"/>
+
+        <activity android:name=".view.bangumi.BangumiTimeTableActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.bangumi.BangumiTagActivity"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="com.cql.imbilibili.utils.GlideModelConfig"
+            android:value="GlideModule"/>
+
+    </application>
+
+</manifest>

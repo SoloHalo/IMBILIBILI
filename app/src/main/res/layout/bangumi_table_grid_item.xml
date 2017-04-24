@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cql.imbilibili.widget.ForegroundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/grid_ser"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?selectableItemBackgroundBorderless"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_card_border">
+
+        <com.cql.imbilibili.widget.ScalableImageView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            app:aspectRadioHeight="128"
+            app:aspectRadioWidth="96" />
+
+        <TextView
+            android:id="@+id/favourites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/shape_gradient_black"
+            android:paddingBottom="@dimen/item_spacing"
+            android:paddingLeft="@dimen/item_half_spacing"
+            android:paddingTop="100dp"
+            android:textAppearance="@style/TextAppearance.App.Subtitle"
+            android:textColor="@color/white" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:paddingTop="@dimen/item_half_spacing"
+        android:textAppearance="@style/TextAppearance.App.Subtitle"
+        android:textColor="?android:textColorPrimary" />
+
+    <TextView
+        android:id="@+id/season"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:paddingTop="@dimen/item_half_spacing"
+        android:textAppearance="@style/TextAppearance.App.Subtitle"
+        android:textColor="?android:textColorPrimary"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/item_half_spacing"
+        android:textAppearance="@style/TextAppearance.App.Subtitle"
+        android:textColor="@color/gray_dark" />
+
+</com.cql.imbilibili.widget.ForegroundLinearLayout>

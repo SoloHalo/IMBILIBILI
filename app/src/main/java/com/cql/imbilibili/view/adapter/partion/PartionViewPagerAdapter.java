@@ -1,0 +1,45 @@
+package com.cql.imbilibili.view.adapter.partion;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+import com.cql.imbilibili.view.BaseFragment;
+import com.cql.imbilibili.view.adapter.partion.model.PartionModel;
+
+import java.util.List;
+
+/**
+ * Created by CQL on 2016/9/29.
+ */
+
+public class PartionViewPagerAdapter extends FragmentPagerAdapter {
+
+    private List<BaseFragment> mFragments;
+    private PartionModel mPartionModel;
+
+    public PartionViewPagerAdapter(FragmentManager fm, List<BaseFragment> fragments, PartionModel partionModel) {
+        super(fm);
+        mFragments = fragments;
+        mPartionModel = partionModel;
+    }
+
+    @Override
+    public Fragment getItem(int position) {
+        return mFragments.get(position);
+    }
+
+    @Override
+    public int getCount() {
+        return mFragments.size();
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        if (position == 0) {
+            return "推荐";
+        } else {
+            return mPartionModel.getPartions().get(position - 1).getName();
+        }
+    }
+}
